@@ -1,0 +1,26 @@
+# --- Core application (required) ---
+streamlit>=1.35,<2.0
+pymupdf>=1.24,<2.0
+python-dotenv>=1.0,<2.0
+
+# --- Report generation (required) ---
+python-docx>=1.1,<2.0
+reportlab>=4.2,<5.0
+
+# --- Matching engine (required) ---
+scipy>=1.11,<2.0
+numpy>=1.26,<3.0
+Pillow>=11
+imagehash>=4.3,<5.0
+
+# --- Optional: cross-lingual semantic paragraph matching ---
+# Without this, the pipeline still runs -- semantic similarity falls back to
+# a neutral score and matching relies more on layout signals (see README).
+# It pulls in torch, so it's the heaviest dependency in this file.
+sentence-transformers>=2.7,<3.0
+
+# --- Optional: AI-written report prose ---
+# Without this (or without GEMINI_API_KEY set), the deterministic template
+# in modules/report_builder.py is used instead -- the report structure is
+# identical either way, only the sentence-level wording differs.
+google-generativeai>=0.7,<1.0

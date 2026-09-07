@@ -1,0 +1,17 @@
+[theme]
+base = "light"
+primaryColor = "#2451B7"
+backgroundColor = "#F5F8FE"
+secondaryBackgroundColor = "#E8F0FC"
+textColor = "#101828"
+font = "sans serif"
+
+# "minimal" is Streamlit's own supported way to drop the Deploy button and
+# the hamburger menu from the top toolbar, instead of hiding it with CSS
+# hacks that can break on a Streamlit version bump.
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
+
+[server]
+maxUploadSize = 300
